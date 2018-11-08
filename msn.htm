@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>
+A Low-cost Attack on a Microsoft CAPTCHA 
+</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+
+<STYLE TYPE="text/css">
+<!--
+.indented
+   {
+   padding-left: 50pt;
+   padding-right: 50pt;
+   }
+-->
+</STYLE>
+
+</HEAD>
+
+<HR>
+
+<A name=description></A>
+<H2>
+<CENTER>
+ A Low-cost Attack on a Microsoft CAPTCHA 
+</CENTER>
+</H2>
+
+<CENTER>
+<p><a href=".">Jeff Yan</a> and Ahmad Salah El Ahmad
+</CENTER>
+
+</p>
+
+<p><strong>Abstract.</strong>  
+CAPTCHA is now almost a standard security technology. The most widely used CAPTCHAs rely on the sophisticated distortion of text images rendering them unrecognisable to the state of the art of pattern recognition techniques, and these text-based schemes have found widespread applications in commercial websites. The state of the art of CAPTCHA design suggests that such text-based schemes should rely on segmentation resistance to provide security guarantee, as individual character recognition after segmentation can be solved with a high success rate by standard methods such as neural networks. In this paper, we analyse the security of a text-based CAPTCHA designed by Microsoft and deployed for years at many of their online services including Hotmail, MSN and Windows Live. This scheme was designed to be segmentation-resistant, and it has been well studied and tuned by its designers over the years. However, our simple attack has achieved a segmentation success rate of higher than 90% against this scheme. It took ~80 ms for our attack to completely segment a challenge on a desktop computer with a 1.86 GHz Intel Core 2 CPU and 2 GB RAM. As a result, we estimate that this Microsoft scheme can be broken with an overall (segmentation and then recognition) success rate of more than 60%. On the contrary, its design goal was that "automatic scripts should not be more successful than 1 in 10,000" attempts (i.e. a success rate of 0.01%). For the first time, we show that a CAPTCHA that is carefully designed to be segmentation-resistant is vulnerable to novel but simple attacks. Our results show that it is not a trivial task to design a CAPTCHA scheme that is both usable and robust.
+
+</p>
+
+<p><big><strong><a href="msn_draft.pdf">Draft research paper</a></strong></big> <small>[PDF]</small><small></small></p>
+
+<p><big><strong> 
+<a href="ccs08.pdf">
+ACM CCS'08 version</a></strong></big> <small>[PDF]</small><small></small></p>
+
+<p><big><strong>Frequently Asked Questions</strong></big></p>
+
+<p><strong>Q. Who was responsible for this research?</strong><br />
+<strong>A.</strong> This project is joint work by Jeff Yan and Ahmad Salah El Ahmad, both at the School 
+of Computing Science, Newcastle University, England. 
+</p>
+
+
+<p><strong>Q. Are your programs or source code available?<br />
+A. </strong>Due to the sensitive nature of this research, we have not released programs or source code at this time.</p>
+
+<p><strong>Q. Have you notified Microsoft about these vulnerabilities? How did they respond?<br />
+A. </strong>
+We notified Microsoft the weakness of their CAPTCHA in Sept, 2007. 
+As requested by them, our paper was held confidential until now (10 April, 2008).
+Some feedbacks from Microsoft on our work: </p>
+
+<p CLASS="indented">
+
+<i>"...in an effort to show our appreciation for the hard work
+that you and your colleagues perform in helping us keep our online
+services products and customers safe, Microsoft has developed  a New
+Security Researchers Acknowledgement Website for Microsoft Online
+Services.
+
+<p CLASS="indented">
+
+The new website formally acknowledges  Security Researchers that
+responsibly submit Security vulnerabilities found within Microsoft
+Online Services Products and applications. Because you responsibly
+submitted this case to us, we would like your permission to place your
+name, company, or alias on our new site."
+
+
+</p>
+
+</i>
+
+<p><strong>Q. Who else was aware of your attack last year?<br />
+A. </strong> Luis von Ahn was briefed on our attacks 
+and results when Jeff was visiting him at CMU in Oct, 2007.
+
+</p>
+
+<p><strong>Q. Are there other CAPTCHAs vulnerable to your attack? <br />
+A. </strong>The CAPTCHA deployed at Yahoo until March 5, 2008 was 
+vulnerable to a variant of our attack.
+
+</p>
+
+<p><strong>Q. How is this different from other attacks, if any?  <br /> 
+A. </strong> 
+It's reported in <a href="http://www.theregister.co.uk/2008/02/08/microsoft_captcha_buster">
+Automated Automated crack for Windows Live captcha goes wild</a> (The Register, Feb 8, 2008) that 
+a surge of spam being sent from Windows Live accounts was observed, and a bot was analysed by a 
+security firm to understand what was behind this phenomenon. However, in this reported case, 
+the captcha decoding was not done by the bot, but at a remote server. It's unclear whether 
+there was cheap human labor behind the scene feeding captcha answers manually. On the other 
+hand, even if an automated attack was 
+launched by the server, to date, no technical detail of this attack has been revealed at all. 
+</p>
+
+Our method was implemented and tested in the summer of 2007, being the first effective attack 
+on the Microsoft CAPTCHA.
+Together with a recognition engine (which is a standard technique), 
+our attack can lead to 
+a success rate of higher than 60% for breaking  
+the Microsoft CAPTCHA. However, the success rate observed for the bot, as in the above report,
+was about 30-35%.
+</p>
+
+
+
+From an academic angle, 
+the most interesting bit of our attack 
+is probably the following. 
+The widely accepted "segmentation resistance" principle in CAPTCHA design was  
+in fact 
+established by the team that designed the Microsoft CAPTCHA. Therefore, 
+even if segmentation resistance is a sound principle, the devil is in the details.
+
+</p>
+
+<p><strong>Q. Have you broken other CAPTCHAs? Have you discovered other interesting attacks? <br />
+A. </strong> We have also broken the latest scheme that Yahoo has 
+deployed at its global web sites since March, 2008. 
+Our attacks on Yahoo CAPTCHAs are discussed in a recent manuscript, entitled
+"<a href="yahoo.htm">Is cheap labour behind the scene? - Low-cost automated attacks on Yahoo CAPTCHAs</a>". 
+The manuscript is not released yet (an abstract is <a href="yahoo.htm">here</a>), but 
+one copy was already sent to Yahoo.
+</p>
+
+We reported in our ACSAC'07
+paper, entitled <a href="acsac07.pdf">Breaking Visual CAPTCHAs with Naive Pattern 
+Recognition Algorithms</a>, 
+a "pixel count" attack that cracks CAPTCHAs 
+by simply counting the number of foreground pixels in each challenge image.
+This attack has broken quite a few schemes with almost 100% success, including 
+almost all the schemes 
+provided at <a href="http://captchaservice.org/">captchaservice.org</a> (a web service dedicated 
+for CAPTCHA generation). </p>
+
+Some other interesting attacks are forthcoming.
+</p>
+
+<p><strong>Q. Why do you do all this? <br />
+A. </strong>
+We believe that  CAPTCHA will go through the same process of evolutionary development 
+as cryptography, digital watermarking and the like, with an iterative process in which 
+successful attacks lead to the development of more robust systems. 
+
+</p>
+
+We are responsible security researchers. 
+Our common practice is that we inform our results to vendors (such as Microsoft and Yahoo), and allow them ample time 
+to fix the vulnerabilities we have identified before we make our papers publically available.
+
+Essentially, we are doing <b><i>free</i></b> consultancy for the vendors to improve their security systems!
+</p>
+
+
+<p><strong>Q. Who is funding this research? <br />
+A. </strong> 
+This is part of our ongoing project: <i><a href="http://homepages.cs.ncl.ac.uk/jeff.yan/#cap">Secure and usable CAPTCHAs</i></a>. 
+
+Ahmad Salah El Ahmad is supported by a prestigious Overseas Research 
+Students (ORS) Award and scholarships from both our school and university this year. 
+We are looking for funding to support Ahmad's PhD study on CAPTCHA, 
+a young but important
+topic, in the coming years. Please contact us if you would like to offer support/help.
+More papers generated in this 
+project are in the pipeline. 
+
+
+</p>
+
+<HR>
+
+
+
+Please send Questions or Comments to 
+<A href="mailto:jeff.yan@ncl.ac.uk">Jeff Yan</A>.
+<HR>
+
+<A HREF="http://www.cs.ncl.ac.uk/">
+<IMG SRC="uni.gif"
+     ALT="University of Newcastle, Computing Science"
+BORDER=0 HSPACE=5 ALIGN="right">
+</A>
+
+<A href="http://homepages.cs.ncl.ac.uk/jeff.yan/lab.html">
+Lab of Security Engineering (LSE) @  Newcastle</A> 
+
+ </BODY></HTML>

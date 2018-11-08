@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>
+Magic Bullet: A Dual-Purpose Computer Game 
+</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+
+<STYLE TYPE="text/css">
+<!--
+.indented
+   {
+   padding-left: 50pt;
+   padding-right: 50pt;
+   }
+-->
+</STYLE>
+
+</HEAD>
+
+<HR>
+
+<A name=description></A>
+<CENTER>
+<H1>
+Magic Bullet: A Dual-Purpose Computer Game 
+</H1>
+
+<h3>
+"Play it to have fun,
+and help with research"
+</h3>
+</p>
+</a>
+(Try it out, simply 
+<a href="http://hisehope.ncl.ac.uk/MagicBullet/MagicBullet.html"> 
+click and play</a>!)
+</h4>
+</CENTER>
+
+<CENTER>
+<p><a href=".">Jeff Yan</a> and Su-Yang Yu
+</CENTER>
+
+</p>
+
+
+
+<h2>INTRODUCTION </h2>
+
+Magic Bullet is an online game that we have developed to streamline 
+the robustness evaluation of CAPTCHAs, as a spin-off from
+<a href="./#cap">our previous project</a> that identified 
+critical vulnerabilties
+in multiple widely deployed CAPTCHAs including those used by
+Microsoft and Yahoo. 
+
+
+</p>
+CAPTCHA has been widely deployed by commercial web sites as a security 
+technology for purposes such as anti-spam. 
+A common approach to evaluating the robustness of CAPTCHA is the use of machine 
+learning techniques. Critical to such machine learning approaches is the 
+acquisition of an adequate set of labeled samples, on which the learning 
+techniques are trained. However, such sample labeling is difficult for 
+computers, since the strength of CAPTCHAs stems exactly from the difficulty 
+computers have in recognizing either distorted texts or image contents. 
+Therefore, until now, researchers have to complete the labeling process 
+manually, which is tedious and expensive.
+
+</p>
+Magic Bullet for the first time turns such sample labeling into a fun experience, and that has achieved a labeling 
+accuracy of as high as 98% in a pilot study. MB serves two purposes simultaneously: 1) like any other games, 
+people play MB just for fun, and 2) people's game play contributes to solving a real problem that has 
+practical utilities but which no known computer algorithm can yet solve, although they might not realize this at all. 
+
+</p>
+<h2>GAME DESIGN </h2>
+
+Inspired by the EPS game (aka the Google image labeler), 
+Magic Bullet is a competitive online game, where at least two teams play against each other, with each team having at least two players. The game theme is collaborative shooting, and players in the same team must cooperate to win the game. 
+
+</p>
+In a typical setting (as we have implemented so far), MB is a 2 vs. 2 team based game. Each of the four players will have the same game interface, a screen with two targets - one is for their own team and the other for their opponents (see Figure 1). During each game round, a randomly chosen character image - typically a segmented CAPTCHA character - is displayed in a position an equal distance away from the two targets. 
+
+
+</p>
+
+<center>
+<img src="mb.jpg" alt="MB screenshot" width="462" height="486" />
+
+</p>
+<caption>
+Figure 1. A screenshot of the <i>Magic Bullet</i> game
+</caption>
+</center>
+
+</p>
+
+Key game rules are:
+
+<ul>
+
+<li>
+You and three other players will be randomly assigned to two pairs, each being a team. 
+
+</li>
+
+</p>
+<li>
+You do not know who you are playing with/against;
+no in-game communication between players is provided.
+
+</li>
+
+</p>
+
+<li> <i>The character image will become a bullet moving slowly towards the target of the team that first enters any key.
+</li>
+
+</p>
+<li>The team that first agrees on the character image wins the current round of the game - the bullet will zoom across the gaming area to hit their target, and score points for this team.</i>
+</li>
+</ul>
+	
+The movement of the bullet can drastically change as if by magic - hence the game name "Magic Bullet".
+
+</p>
+People play the game to 
+beat friends, win points and have fun. However, their game play also 
+tells researchers which 
+image is which character - the assocation of the correct characters 
+and the images are "labeled samples", which can contribute
+to the development of smarter computer programs and improvement of
+computer security. 
+
+</p>
+
+The design and implementation details, together with an initial evaluation, of MB are reported in <a href="MB_ijcai09.pdf">our academic paper</a>, which will appear 
+at IJCAI'09, a leading AI conference in Pasadena, CA in the summer, 2009.
+
+</p>
+
+<h2>APPLICATIONS </h2>
+
+Magic Bullet was initially designed to label segmented CAPTCHA characters. However, it can also be used:
+
+<ul>
+<li> <b>To aid the development of better algorithms for handwriting recognition</b>.
+
+ When developing handwriting recognition algorithms, it is routine to 
+segment cursive texts and then manually label character samples.  
+MB can streamline such a process. 
+</li>
+
+</p>
+
+<li> <b>As a training tool for improving people's keyboard typing skills</b>, since fast but accurate keyboard typing is key to winning the game.
+</li>
+
+</p>
+<li> <b>As a novel CAPTCHA</b> (probably not particularly strong though). A website can ask people to 
+play this game for a while to win enough points before they are 
+considered humans and allowed to submit a valid comment or other web form. 
+
+</p>
+<li> <b>To do binary labeling</b>, where only two 
+types of objects are required to be labeled respectively. 
+We have extended MB to provide a generic solution to binary 
+labeling. One application of this extension is to streamline the robustness evaluation of image CAPTCHAs such as Microsoft's Assira. Of course, this 
+extension (e.g. our <i>"Cat or Dog"</i> game), can be a novel CAPTCHA itself, which is stronger than the 
+MB-game CAPTCHA. 
+</li>
+
+</ul>
+
+<h2>TRY IT OUT!</h2>
+
+
+
+Magic Bullet is a web game. You 
+don't have to install anything, just click and play at 
+<a href="http://hisehope.ncl.ac.uk/MagicBullet/MagicBullet.html"> 
+here</a>. Any browser on any OS will do. 
+
+
+<h2>	CONCLUSIONS </h2>
+Magic Bullet is a simple but novel extension to the ESP game. 
+It provides the first effective solution to some labeling problems 
+that the famous ESP game fails to address. Being both 
+collaborative and competitive in nature, Magic Bullet also appears to 
+define a novel genre of human computation games.
+
+</p>
+

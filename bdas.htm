@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Background Draw a Secret (BDAS) </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+<STYLE>DIV.Section1 {
+	page: Section1
+}
+SPAN.GramE {
+	
+}
+SPAN.Heading1Char {
+	FONT-WEIGHT: bold; FONT-FAMILY: Arial
+}
+</STYLE>
+</HEAD>
+
+<BODY bgColor=white>
+<P align=center><IMG alt=New class="top" src="bdas.png"> </P>
+<TABLE cellPadding=5 width=820 align=center>
+  <TBODY>
+  <TR>
+    <TD width=100><A href="#description">Description</A></TD>
+    <TD width=140><A href="#publications">Papers & Talks</A></TD>
+    <TD width=100><A href="#technical">Quick Start</A></TD>
+    <TD width=100><A href="#press">In the News</A></TD>
+    <TD width=100><A href="#staff">Project Staff</A></TD>
+  </TR>
+  </TBODY>
+</TABLE>
+<HR>
+
+
+<br>
+<center>
+<a href="http://royalsociety.org/sse/08/pages/page19ea.html?q=node/84"><IMG SRC="sse08_logo.jpg"
+     ALT="The Royal Society SSE08 logo"
+BORDER=0 HSPACE=5 ALIGN="middle" width=331 height=181> </a>
+ 
+
+<p>
+<IMG SRC="new.gif"> <a href="rsse.htm">Royal Society Summer Science Exhibition</a> update 
+<br>
+(Clicking the above link to check whether you have won an iPod Shuffle!  
+)  
+</p>
+
+</center>
+
+<HR>
+
+<A name=description></A>
+<H2>Description</H2>
+
+<p> The use of text passwords (i.e. alphanumeric passwords) for user authentication is ubiquitous. However, this common practice has some well-known weaknesses. For example, many people find it difficult to remember strong passwords, and they tend to choose easily memorable passwords that are easy to guess. </p>
+
+<p> 
+Many of the deficiencies of text passwords arise from the limitations of human memory. Numerous cognitive and psychological studies have revealed that people perform far better when remembering pictures rather than words: as the saying goes, a picture is worth a thousand words. Background Draw a Secret (BDAS) is a novel graphical password scheme we have developed. Extending the <a href="http://www.usenix.org/publications/library/proceedings/sec99/full_papers/jermyn/jermyn_html/node4.html">Draw a Secret (DAS)</a> scheme developed by researchers from New York University, Bell Labs and AT&T Labs, BDAS delivers much enhanced usability and security.</p>
+
+<p> 
+In BDAS, a password is a free-form drawing that a user creates on a grid underlaid with a background image of their choice. Those who took part in testing this new system created passwords that were much more secure than the state of the art, and most testers also found them easy to remember.
+
+The background image is key to this technique's success - it encourages people to make their drawing passwords more complicated and less predictable, and aid people to re-create them in the correct locations on the drawing grid.
+
+Potentially, BDAS is also very good for people with dyslexia or who can't read or write well.</p>
+
+<p>
+Our experimental studies compared DAS and BDAS use. The BDAS passwords recalled in a one-week memorability test were, on average, more complicated than their DAS counterparts by more than 10 bits. This means that the memorable BDAS passwords improved security by a factor of more than 1024. They were also more secure than the currently ubiquitous text passwords by an even larger factor.
+</p>
+
+In particular, we observed that user drawings in the BDAS group show:
+<ul>
+<li>increased complexity as users are able to add more components to drawings with a reduced cognitive burden over DAS</li>
+<li>reduced reliance on global symmetry to create memorable drawings</li>
+<li>reduced reliance on centring drawings for memorable placement</li>
+</ul>
+In the meantime, people creating these much more complicated BDAS passwords found them just as easy to remember as their DAS counterparts. </P>
+
+
+<p>Of course BDAS does <i>not</i> eliminate weak drawings, however it gives users a 
+better environment with which to create a good one. It is our vision any implementation of BDAS would 
+include our Proactive Graphical Password Checker we call <i>GraphiCheck</i>. </p>
+
+<p>We have also been looking into the potential threat of
+and defence against 
+<i>shoulder surfing</i>, where attackers steal passwords by simply 
+looking over a victim's shoulder.
+<HR>
+
+
+<A name=publications></A>
+<H2><b><font size="5">Papers & Talks</font></b></H2>
+<UL>
+  <LI><A href="http://doi.acm.org/10.1145/1315245.1315252">
+Do background images improve "draw a secret" graphical passwords?</A> [<A href="ccs07.pdf">local copy</a>]<BR>
+  14th ACM conference on Computer and Communications Security (CCS), 
+Alexandria, Virginia, USA, Oct 2007.<BR><BR>
+
+Presentation slides: CCS'07 (Oct 30, 2007) [PPT] 
+[<a href="ccs07_talk.pdf">PDF</a>], Cambridge University Security Seminar (Dec 7, 2007) [PPT][<a href="cam_bdas07_talk.pdf">PDF</a>]<BR><BR>
+</LI>
+<LI>
+<a href="soups11.pdf">Shoulder Surfing Defence for Recall-based Graphical Passwords</a>. SOUPS'11.
+<br><br>
+David implemented SSR-BDAS, and Sacha Brostoff (@UCL) did almost the entire 
+data analysis for the paper - thanks guys!!
+
+</UL>
+<HR>
+
+<A name=technical></A>
+<H2>Quick Start</H2>
+
+<p>How BDAS works </p>
+
+<a href="http://www.cs4fn.org/security/picturepasswords.php">This article</a> 
+from cs4fn.org - 'Computer Science for Fun', an interesting magazine - turns out to be a nice writeup!
+
+
+<HR>
+
+
+
+<A name=press></A>
+<H2>In the News</H2>
+
+BDAS has been in the news, here is a snippet of some media coverage we have received:</p>
+<ul>
+<li><a href="http://news.bbc.co.uk/1/hi/england/tyne/7060368.stm">BBC News Online</a></li>
+<li>BBC World Service</li>
+
+<li><a href="http://www.sciencemuseum.org.uk/antenna/picturepasswords/">London Science Museum</a></li>
+
+<li><a href="http://technews.acm.org/archives.cfm?fo=2007-10-oct/oct-24-2007.html">ACM Tech News</a></li>
+
+
+<li><a href="http://it.slashdot.org/article.pl?sid=07/11/01/2241246">Slashdot</a></li>
+
+<li><a href="http://tech.uk.msn.com/news/article.aspx?cp-documentid=6485241 
+">MSN</a></li>
+
+
+
+<li><a href="http://news.zdnet.co.uk/security/0,1000000189,39290532,00.htm">ZdNet</a>, UK</li>
+
+<li><a href="http://www.zdnet.com.au/news/security/soa/UK-researchers-fine-tune-picture-passwords/0,130061744,339283498,00.htm">ZdNet</a>, Australia</li>
+
+
+<li><a href="http://www.sciencedaily.com/releases/2007/10/071030091438.htm/">Science Daily</a></li>
+
+
+<li><a href="http://networks.silicon.com/mobile/0,39024665,39169040,00.htm">Silicon.com</a></li>
+
+<li><a href="http://arstechnica.com/news.ars/post/20071103-graffiti-as-password-secure-and-memorable.html">Ars technica</a> ("the art of technology")</li>
+
+<li><a href="http://www.dailymail.co.uk/pages/live/articles/technology/technology.html?in_article_id=489465&amp;in_page_id=1965&amp;ito=1490">Daily Mail</a></li>
+
+<li> <a href="http://www.elsevier.nl/nieuws/internet_en_gadgets/artikel/asp/artnr/177367/index.html">Elsevier</a>, Netherlands</li>
+
+<li><a href="http://www.mumbaimirror.com/net/mmpaper.aspx?page=article&amp;sectid=7&amp;contentid=2007102720071027023734640a96dea5b">Mumbai Mirror</a>, India</li>
+
+<li><a href="http://www.pakistanchronicle.com/paper/Houston/pdf/November_0907/PCC/55.pdf">Pakistan Chronicle</a> </li>
+
+<li><a href="http://www.iran-daily.com/1386/2981/pdf/i4.pdf">Iran Daily</a>, Iran </li>
+</ul>
+
+<HR>
+<A name=staff></A>
+<H2>Project Staff</H2>
+<UL>
+  <LI><a href="http://homepages.cs.ncl.ac.uk/jeff.yan/">Jeff Yan</a> (Principal Investigator) 
+  <LI>
+Paul Dunphy (PhD student) 
+
+<li>Ahmad El Ahmad (PhD student)
+<li>David Griffiths (FYP student)
+</UL>
+
+Please send Questions or Comments to 
+<A href="mailto:jeff.yan@lancaster.ac.uk">Jeff Yan</A>.
+<HR>
+
+
+
+<A href="http://www.comp.lancs.ac.uk/~yanj2/">
+Lab of Security Engineering 
+</A> 
+
+ </BODY></HTML>
